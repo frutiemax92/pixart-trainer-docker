@@ -5,4 +5,4 @@
 #set -e # Stop script on error
 
 git clone https://github.com/PixArt-alpha/PixArt-sigma.git
-jupyter lab --allow-root --no-browser --port=8888 --ip=* --FileContentsManager.delete_to_trash=False --ServerApp.terminado_settings='{"shell_command":["/bin/bash"]}' --ServerApp.token=$JUPYTER_TOKEN --ServerApp.allow_origin=* --ServerApp.preferred_dir=/workspace
+jupyter notebook --ip=0.0.0.0
