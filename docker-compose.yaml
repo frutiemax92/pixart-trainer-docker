@@ -1,0 +1,22 @@
+
+services:
+  pixart-sigma-trainer:
+    build: .
+    shm_size: '24gb'
+    image: frutiemax/pixart-sigma-trainer
+    ports:
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:6006:6006"
+    environment:
+      - JUPYTER_TOKEN=password
+    volumes:
+      - .:/workspace/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    
