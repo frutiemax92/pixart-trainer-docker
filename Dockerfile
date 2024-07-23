@@ -29,7 +29,7 @@ RUN
 RUN pip3 install --upgrade pip
 #pip3 install torch torchvision torchaudio
 RUN pip3 install --upgrade --no-cache-dir jupyterlab ipywidgets jupyter-archive jupyter_contrib_nbextensions
-RUN pip3 install jupyterlab psutil notebook
+RUN pip3 install --upgrade jupyter_server jupyterlab psutil notebook
 RUN pip3 install numpy pillow triton
 
 WORKDIR /workspace
