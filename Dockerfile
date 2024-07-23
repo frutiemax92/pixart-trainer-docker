@@ -36,8 +36,8 @@ WORKDIR /workspace
 COPY builder/setup.sh /setup.sh
 RUN chmod +x /setup.sh
 
-RUN jupyter contrib nbextension install --user && \
-    jupyter nbextension enable --py widgetsnbextension
+# RUN jupyter contrib nbextension install --user && \
+#     jupyter nbextension enable --py widgetsnbextension
 
 RUN echo "running setup.sh"
 CMD ["/setup.sh"]
